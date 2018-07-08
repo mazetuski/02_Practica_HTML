@@ -1,0 +1,63 @@
+/* Fonts */
+@font-face {
+    src: url("../fonts/Roboto-Regular.ttf");
+    font-family: Roboto-Regular;
+}
+
+@font-face {
+    src: url("../fonts/Roboto-Bold.ttf");
+    font-family: Roboto-Bold;
+}
+
+/* Variables*/
+
+:root {
+    /* Fonts */
+    --font-generic: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-roboto-regular:  Roboto-Regular, var(--font-generic);
+    --font-roboto-bold:  Roboto-Bold, var(--font-generic);
+    /* Colors */
+    --color-font-primary: #000;
+}
+
+/* Page Styles*/
+body{
+    font-size: 24px;
+    font-family: var(--font-roboto-regular);
+    color: var(--color-font-primary);
+}
+
+body h1{
+    font-size: 60px;
+}
+
+body h2{
+    font-size: 52px;
+}
+
+body h3{
+    font-size: 46px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header */
+header {
+    height: 100vh;
+    background-image: url("../images/posiblefondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Sections */
+
+section{
+    margin: 3rem 0;
+}
+
+section > h2 {
+    text-align: center;
+}
