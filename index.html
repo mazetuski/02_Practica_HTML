@@ -10,48 +10,102 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <header>
-        <h1>CV Miguel Ángel Zamora Blanco</h1>
-    </header>
-    <nav>
-        <ul>
-            <li>¿Quién Soy?</li>
-            <li>Formación</li>
-            <li>Experiencie</li>
-            <li>Sobre mí</li>
-            <li>Contacto</li>
-        </ul>
-    </nav>
-    <main>
-        <section id="who">
-            <h2>¿Quién soy?</h2>
-            <img src="./images/miguel.jpeg" alt="Miguel Ángel Zamora Blanco">
-        </section>
-        <section id="formation">
-            <h2>Formación</h2>
-        </section>
-        <section id="experience">
-            <h2>Experiencia</h2>
-        </section>
-        <section id="about">
-            <h2>Sobre mí</h2>
-        </section>
-        <section id="contact">
-            <h2>Contacto</h2>
-            <form action="post" name="contact_form" id="contact_form">
-                <input type="text" placeholder="Nombre">
-                <input type="email" placeholder="Email">
-                <select name="meet" id="meet">
-                    <option value="empresa">Por tu empresa</option>
-                    <option value="studies">Por tus estudios</option>
-                    <option value="keepcoding">En Keepcoding</option>
-                    <option value="others">Otros</option>
-                </select>
-                <input type="tel" placeholder="Teléfono">
-                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Comentario"></textarea>
-                <input type="submit" value="Enviar">
-            </form>
-        </section>
-    </main>
+<header>
+    <h1>CV Miguel Ángel Zamora Blanco</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="#who">¿Quién Soy?</a></li>
+        <li><a href="#interest">Intereses</a></li>
+        <li><a href="#formation">Formación</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#contact">Contacto</a></li>
+    </ul>
+</nav>
+<main>
+    <section id="who">
+        <h2>¿Quién soy?</h2>
+        <article class="flex-wrapper">
+            <div class="text-center">
+                <img src="./images/miguel.jpeg" alt="Miguel Ángel Zamora Blanco">
+            </div>
+            <p>Soy un enamorado de la programación y de la informática en general, gran parte de mi tiempo libre la
+                dedico a seguir aprendiendo. Este último año lo he pasado en Sopinet ayudando a Startups, conociendo
+                todo tipo de ideas y personas que me han hecho crecer profesionalmente y me han enseñado que: ¡Todo en
+                esta vida se puede programar!</p>
+        </article>
+    </section>
+    <section id="interest">
+        <h2>Áreas de Interés</h2>
+        <article class="flex-wrapper text-center">
+            <div>Desarrollo Web</div>
+            <div>IoT</div>
+            <div>Agile</div>
+            <div>Chatbots</div>
+            <div>Criptomonedas</div>
+            <div>Startups</div>
+        </article>
+    </section>
+    <section id="formation">
+        <h2>Formación</h2>
+        <div>
+            <h4>Ciclo Superior Desarrollo de Aplicaciones Web</h4>
+            <p>Realizado en el IES Gran Capitán Córdoba Entre los años 2015-2017</p>
+        </div>
+    </section>
+    <section id="experience">
+        <h2>Experiencia</h2>
+        <div>
+            <h4>Desarrollador Web en Sopinet</h4>
+            <p>Desde Mayo 2017</p>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <article class="portfolio-container">
+            <h4>Trazeo</h4>
+            <p>Parte del equipo de desarrollo</p>
+            <p>Desarrollo frontend del restyling de la web</p>
+            <p>Premio Trazeo en el MWC Barcelona 2018</p>
+        </article>
+        <article class="portfolio-container">
+            <h4>Phonexpert</h4>
+            <p>Parte del equipo de desarrollo</p>
+            <p>Desarrollo chatbox de facebook</p>
+        </article>
+        <article class="portfolio-container">
+            <h4>Sopinet</h4>
+            <p>Desarrollo Full Stack de la web con motivo del re-branding</p>
+        </article>
+    </section>
+    <section id="about">
+        <h2>Sobre mí</h2>
+    </section>
+    <section id="form_section">
+        <h2>Formulario de Contacto</h2>
+        <form action="post" name="contact_form" id="contact_form">
+            <input type="text" placeholder="Nombre">
+            <input type="email" placeholder="Email">
+            <select name="meet" id="meet">
+                <option value="empresa">Por tu empresa</option>
+                <option value="studies">Por tus estudios</option>
+                <option value="keepcoding">En Keepcoding</option>
+                <option value="others">Otros</option>
+            </select>
+            <input type="tel" placeholder="Teléfono">
+            <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Comentario"></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</main>
+<footer>
+    <section id="contact">
+        <a href="https://www.linkedin.com/in/miguel-angel-zamora-blanco/">Linkedin</a>
+        <a href="https://github.com/mazetuski">Github</a>
+        <a href="mailto:mazetuski22@gmail.com">Gmail</a>
+    </section>
+</footer>
 </body>
 </html>

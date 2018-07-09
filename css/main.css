@@ -18,6 +18,8 @@
     --font-roboto-bold:  Roboto-Bold, var(--font-generic);
     /* Colors */
     --color-font-primary: #000;
+    --color-font-secundary: #fff;
+    --color-primary: #394D70;
 }
 
 /* Page Styles*/
@@ -74,8 +76,66 @@ nav > ul > li{
 
 section{
     margin: 3rem 0;
+    padding: 2rem 0 ;
+    min-height: 50vh;
+}
+
+section > article, section > article > div{
+    padding: 2rem;
 }
 
 section > h2 {
+    text-align: center;
+}
+
+/* Flex */
+
+section .flex-wrapper {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Who */
+
+section#who .flex-wrapper > div{
+    flex: 0 0 22%;
+}
+
+section#who .flex-wrapper > p{
+    flex: 0 0 70%;
+}
+
+section#who .flex-wrapper{
+    justify-content: space-around;
+}
+
+section#who .flex-wrapper img{
+    max-width: 300px;
+}
+
+/* Interest */
+
+section#interest article {
+    min-height: 60vh;
+}
+
+section#interest .flex-wrapper{
+    justify-content: space-around;
+}
+
+section#interest .flex-wrapper > div{
+    flex: 0 0 25%;
+    background-color: var(--color-primary);
+    color: var(--color-font-secundary);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+/* Utils */
+
+.text-center{
     text-align: center;
 }
