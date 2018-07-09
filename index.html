@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Miguel Ángel Zamora Blanco</title>
     <link rel="stylesheet" href="./css/reset.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -29,7 +30,7 @@
         <h2>¿Quién soy?</h2>
         <article class="flex-wrapper">
             <div class="text-center">
-                <img src="./images/miguel.jpeg" alt="Miguel Ángel Zamora Blanco">
+                <img class="rounded" src="./images/miguel.jpeg" alt="Miguel Ángel Zamora Blanco">
             </div>
             <p>Soy un enamorado de la programación y de la informática en general, gran parte de mi tiempo libre la
                 dedico a seguir aprendiendo. Este último año lo he pasado en Sopinet ayudando a Startups, conociendo
@@ -50,35 +51,59 @@
     </section>
     <section id="formation">
         <h2>Formación</h2>
-        <div>
-            <h4>Ciclo Superior Desarrollo de Aplicaciones Web</h4>
-            <p>Realizado en el IES Gran Capitán Córdoba Entre los años 2015-2017</p>
-        </div>
+        <article class="flex-wrapper">
+            <div>
+                <h4>Ciclo Superior Desarrollo de Aplicaciones Web</h4>
+                <p>Realizado en el IES Gran Capitán Córdoba entre 2015-2017</p>
+            </div>
+        </article>
     </section>
     <section id="experience">
         <h2>Experiencia</h2>
-        <div>
-            <h4>Desarrollador Web en Sopinet</h4>
-            <p>Desde Mayo 2017</p>
-        </div>
+        <article class="flex-wrapper">
+            <div>
+                <h4>Desarrollador Web en Sopinet</h4>
+                <p>Desde Mayo 2017</p>
+            </div>
+        </article>
     </section>
     <section id="portfolio">
         <h2>Portfolio</h2>
-        <article class="portfolio-container">
-            <h4>Trazeo</h4>
-            <p>Parte del equipo de desarrollo</p>
-            <p>Desarrollo frontend del restyling de la web</p>
-            <p>Premio Trazeo en el MWC Barcelona 2018</p>
-        </article>
-        <article class="portfolio-container">
-            <h4>Phonexpert</h4>
-            <p>Parte del equipo de desarrollo</p>
-            <p>Desarrollo chatbox de facebook</p>
-        </article>
-        <article class="portfolio-container">
-            <h4>Sopinet</h4>
-            <p>Desarrollo Full Stack de la web con motivo del re-branding</p>
-        </article>
+        <div class="flex-wrapper">
+            <article class="portfolio-container">
+                <header></header>
+                <div>
+                    <h4 class="text-center">Trazeo</h4>
+                    <p>Desarrollo frontend de la web</p>
+                    <p>Premio MWC Barcelona 2018</p>
+                </div>
+                <footer class="icon text-center">
+                    <a href="https://trazeo.es/"><i class="fas fa-external-link-alt"></i></a>
+                </footer>
+            </article>
+            <article class="portfolio-container">
+                <header></header>
+                <div>
+                    <h4 class="text-center">Phonexpert</h4>
+                    <p>Parte del equipo de desarrollo</p>
+                    <p>Desarrollo chatbox de facebook</p>
+                </div>
+                <footer class="icon text-center">
+                    <a href="http://phonexpert.co/"><i class="fas fa-external-link-alt"></i></a>
+                </footer>
+            </article>
+            <article class="portfolio-container">
+                <header></header>
+                <div>
+                    <h4 class="text-center">Sopinet</h4>
+                    <p>Desarrollo Full Stack de la web</p>
+                    <p>Parte del equipo de rebranding de la marca</p>
+                </div>
+                <footer class="icon text-center">
+                    <a href="https://sopinet.com/"><i class="fas fa-external-link-alt"></i></a>
+                </footer>
+            </article>
+        </div>
     </section>
     <section id="about">
         <h2>Sobre mí</h2>

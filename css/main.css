@@ -17,36 +17,61 @@
     --font-roboto-regular:  Roboto-Regular, var(--font-generic);
     --font-roboto-bold:  Roboto-Bold, var(--font-generic);
     /* Colors */
-    --color-font-primary: #000;
+    --color-font-primary: #333;
     --color-font-secundary: #fff;
     --color-primary: #394D70;
+    --color-shadow: #BCBCBC;
 }
 
 /* Page Styles*/
+
 body{
-    font-size: 24px;
+    font-size: 18px;
     font-family: var(--font-roboto-regular);
     color: var(--color-font-primary);
+    line-height: 1.9em;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+a:hover{
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-roboto-bold);
 }
 
 body h1{
-    font-size: 60px;
+    font-size: 50px;
 }
 
 body h2{
-    font-size: 52px;
+    font-size: 42px;
 }
 
 body h3{
-    font-size: 46px;
+    font-size: 36px;
+}
+
+body h4{
+    font-size: 30px;
 }
 
 img {
     max-width: 100%;
 }
 
+.icon i{
+    font-size: 3rem;
+}
+
 /* Header */
-header {
+body > header {
     height: 100vh;
     background-image: url("../images/posiblefondo.jpg");
     background-size: cover;
@@ -74,14 +99,17 @@ nav > ul > li{
 
 /* Sections */
 
-section{
-    margin: 3rem 0;
-    padding: 2rem 0 ;
+section {
+    padding: 4rem 1rem;
+}
+
+section, .flex-wrapper{
     min-height: 50vh;
 }
 
-section > article, section > article > div{
-    padding: 2rem;
+section:nth-child(even){
+    background-color: var(--color-primary);
+    color: var(--color-font-secundary);
 }
 
 section > h2 {
@@ -97,18 +125,14 @@ section .flex-wrapper {
     align-items: center;
 }
 
+section .flex-wrapper{
+    justify-content: space-around;
+}
+
 /* Who */
 
-section#who .flex-wrapper > div{
-    flex: 0 0 22%;
-}
-
-section#who .flex-wrapper > p{
-    flex: 0 0 70%;
-}
-
-section#who .flex-wrapper{
-    justify-content: space-around;
+section#who .flex-wrapper > div, section#who .flex-wrapper > p{
+    flex: 0 0 95%;
 }
 
 section#who .flex-wrapper img{
@@ -121,21 +145,131 @@ section#interest article {
     min-height: 60vh;
 }
 
-section#interest .flex-wrapper{
-    justify-content: space-around;
-}
-
 section#interest .flex-wrapper > div{
-    flex: 0 0 25%;
-    background-color: var(--color-primary);
-    color: var(--color-font-secundary);
+    flex: 0 0 92%;
+    background-color: var(--color-font-secundary);
+    color: var(--color-primary);
     padding-top: 3rem;
     padding-bottom: 3rem;
+    margin-top: 2rem;
 }
 
+/* Portfolio */
+
+section#portfolio .flex-wrapper{
+    align-items: normal;
+}
+
+.portfolio-container{
+    box-shadow: 0 8px 10px var(--color-shadow);
+    flex: 0 0 98%;
+    margin-top: 4rem;
+}
+
+.portfolio-container > header{
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;
+}
+
+.portfolio-container:nth-child(1) header{
+    background-image: url('../images/trazeo.jpg');
+}
+
+.portfolio-container:nth-child(2) header{
+    background-color: #5343B0;
+    background-image: url('../images/phonexpert.jpg');
+}
+
+.portfolio-container:nth-child(3) header{
+    background-image: url('../images/sopinet2.svg');
+}
+
+.portfolio-container > div > h4{
+    margin-bottom: 2rem;
+}
+
+.portfolio-container > div{
+    padding: 1rem;
+}
+
+.portfolio-container > footer{
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    align-self: flex-end;
+}
 
 /* Utils */
 
 .text-center{
     text-align: center;
+}
+
+.rounded{
+    border-radius: 50%;
+}
+
+/* Responsive tablet and laptop */
+
+@media only screen and (min-width: 768px){
+    /* Page styles*/
+    body {
+        font-size: 24px;
+    }
+
+    body h1{
+        font-size: 80px;
+    }
+
+    body h2{
+        font-size: 65px;
+    }
+
+    body h3{
+        font-size: 52px;
+    }
+
+    body h4{
+        font-size: 44px;
+    }
+
+    section#interest .flex-wrapper > div {
+        flex: 0 0 25%;
+    }
+
+    /* Sections */
+    section > article, section > article > div{
+        padding: 2rem;
+    }
+
+    /* Who*/
+
+    section#who .flex-wrapper > div{
+        flex: 0 0 22%;
+    }
+
+    section#who .flex-wrapper > p{
+        flex: 0 0 70%;
+    }
+
+    /* Portfolio*/
+
+    .portfolio-container {
+        flex: 0 0 40%;
+    }
+
+    .portfolio-container > div{
+        padding: 2rem;
+    }
+}
+
+
+@media only screen and (min-width: 1200px){
+
+    /* Portfolio*/
+    .portfolio-container {
+        flex: 0 0 26%;
+    }
 }
