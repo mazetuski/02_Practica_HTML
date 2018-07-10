@@ -14,16 +14,19 @@
 <header>
     <h1>CV Miguel Ángel Zamora Blanco</h1>
 </header>
+<span id="navButton" class="navButton">
+    <i class="fas fa-bars icon-visible"></i>
+    <i class="fas fa-times icon-hidden"></i>
+</span>
 <nav>
-    <ul>
-        <li><a href="#who">¿Quién Soy?</a></li>
-        <li><a href="#interest">Intereses</a></li>
-        <li><a href="#formation">Formación</a></li>
-        <li><a href="#experience">Experiencia</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#contact">Contacto</a></li>
-    </ul>
+    <a href="#who">¿Quién Soy?</a>
+    <a href="#interest">Intereses</a>
+    <a href="#formation">Formación</a>
+    <a href="#experience">Experiencia</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#about">Sobre mí</a>
+    <a href="#form_section">Formulario</a>
+    <a href="#contact">Contacto</a>
 </nav>
 <main>
     <section id="who">
@@ -41,12 +44,30 @@
     <section id="interest">
         <h2>Áreas de Interés</h2>
         <article class="flex-wrapper text-center">
-            <div>Desarrollo Web</div>
-            <div>IoT</div>
-            <div>Agile</div>
-            <div>Chatbots</div>
-            <div>Criptomonedas</div>
-            <div>Startups</div>
+            <div>
+                <h4>Web</h4>
+                <i class="fas fa-share-alt-square"></i>
+            </div>
+            <div>
+                <h4>IoT</h4>
+                <i class="fas fa-globe"></i>
+            </div>
+            <div>
+                <h4>Agile</h4>
+                <i class="far fa-clock"></i>
+            </div>
+            <div>
+                <h4>Chatbots</h4>
+                <i class="fas fa-robot"></i>
+            </div>
+            <div>
+                <h4>Criptomonedas</h4>
+                <i class="fab fa-bitcoin"></i>
+            </div>
+            <div>
+                <h4>Startups</h4>
+                <i class="fas fa-rocket"></i>
+            </div>
         </article>
     </section>
     <section id="formation">
@@ -97,7 +118,7 @@
                 <div>
                     <h4 class="text-center">Sopinet</h4>
                     <p>Desarrollo Full Stack de la web</p>
-                    <p>Parte del equipo de rebranding de la marca</p>
+                    <p>Parte del equipo del rebranding</p>
                 </div>
                 <footer class="icon text-center">
                     <a href="https://sopinet.com/"><i class="fas fa-external-link-alt"></i></a>
@@ -132,5 +153,8 @@
         <a href="mailto:mazetuski22@gmail.com">Gmail</a>
     </section>
 </footer>
+
+<!-- JAVASCRIPTS -->
+<script src="js/app.js" type="module" defer></script>
 </body>
 </html>

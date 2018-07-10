@@ -14,30 +14,31 @@
 :root {
     /* Fonts */
     --font-generic: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-roboto-regular:  Roboto-Regular, var(--font-generic);
-    --font-roboto-bold:  Roboto-Bold, var(--font-generic);
+    --font-roboto-regular: Roboto-Regular, var(--font-generic);
+    --font-roboto-bold: Roboto-Bold, var(--font-generic);
     /* Colors */
     --color-font-primary: #333;
     --color-font-secundary: #fff;
     --color-primary: #394D70;
     --color-shadow: #BCBCBC;
+    --color-shadow-secundary: rgba(30, 44, 61, 0.53);
 }
 
 /* Page Styles*/
 
-body{
+body {
     font-size: 18px;
     font-family: var(--font-roboto-regular);
     color: var(--color-font-primary);
     line-height: 1.9em;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--color-primary);
 }
 
-a:hover{
+a:hover {
     text-decoration: none;
     color: var(--color-primary);
 }
@@ -46,19 +47,19 @@ h1, h2, h3, h4 {
     font-family: var(--font-roboto-bold);
 }
 
-body h1{
+body h1 {
     font-size: 50px;
 }
 
-body h2{
+body h2 {
     font-size: 42px;
 }
 
-body h3{
+body h3 {
     font-size: 36px;
 }
 
-body h4{
+body h4 {
     font-size: 30px;
 }
 
@@ -66,7 +67,7 @@ img {
     max-width: 100%;
 }
 
-.icon i{
+.icon i {
     font-size: 3rem;
 }
 
@@ -79,22 +80,70 @@ body > header {
     background-repeat: no-repeat;
 }
 
+body > header > h1 {
+    background-color: var(--color-font-secundary);
+    text-align: center;
+    line-height: 1.5em;
+    transform: translateY(5rem);
+    font-size: 30px;
+}
+
 /* Nav */
-nav {
+
+#navButton {
     position: fixed;
     top: 0;
     right: 0;
-    text-align: right;
+    background-color: var(--color-font-primary);
+    color: var(--color-font-secundary);
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    transition: .5s;
 }
 
-nav > ul{
-    padding: 1rem;
-    list-style: none;
+#navButton .icon-hidden {
+    visibility: hidden;
+    position: absolute;
 }
 
-nav > ul > li{
-    display: inline-block;
-    padding: 1rem;
+#navButton .icon-visible{
+    transform: rotate(180deg);
+    transition: transform .4s;
+}
+
+nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--color-font-primary);
+    overflow-x: hidden;
+    padding-top: 3rem;
+    transition: 0.5s;
+    box-shadow: -5px 0 5px var(--color-shadow-secundary);
+}
+
+nav.expanded-nav {
+    width: 250px;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-font-secundary);
+    padding-left: 2rem;
+    padding-top: 1.2rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: var(--color-font-secundary);
+}
+
+nav a.active {
+    border:none;
+    color: var(--color-primary);
 }
 
 /* Sections */
@@ -103,11 +152,11 @@ section {
     padding: 4rem 1rem;
 }
 
-section, .flex-wrapper{
+section, .flex-wrapper {
     min-height: 50vh;
 }
 
-section:nth-child(even){
+section:nth-child(even) {
     background-color: var(--color-primary);
     color: var(--color-font-secundary);
 }
@@ -125,17 +174,17 @@ section .flex-wrapper {
     align-items: center;
 }
 
-section .flex-wrapper{
+section .flex-wrapper {
     justify-content: space-around;
 }
 
 /* Who */
 
-section#who .flex-wrapper > div, section#who .flex-wrapper > p{
+section#who .flex-wrapper > div, section#who .flex-wrapper > p {
     flex: 0 0 95%;
 }
 
-section#who .flex-wrapper img{
+section#who .flex-wrapper img {
     max-width: 300px;
 }
 
@@ -145,28 +194,34 @@ section#interest article {
     min-height: 60vh;
 }
 
-section#interest .flex-wrapper > div{
+section#interest .flex-wrapper > div {
     flex: 0 0 92%;
     background-color: var(--color-font-secundary);
     color: var(--color-primary);
     padding-top: 3rem;
     padding-bottom: 3rem;
     margin-top: 2rem;
+    box-shadow: 0 8px 10px var(--color-shadow-secundary);
+}
+
+section#interest .flex-wrapper > div i {
+    font-size: 3rem;
+    margin: 20px 10px 10px 10px;
 }
 
 /* Portfolio */
 
-section#portfolio .flex-wrapper{
+section#portfolio .flex-wrapper {
     align-items: normal;
 }
 
-.portfolio-container{
+.portfolio-container {
     box-shadow: 0 8px 10px var(--color-shadow);
     flex: 0 0 98%;
     margin-top: 4rem;
 }
 
-.portfolio-container > header{
+.portfolio-container > header {
     height: 200px;
     background-position: center;
     background-size: contain;
@@ -174,28 +229,28 @@ section#portfolio .flex-wrapper{
     margin-bottom: 2rem;
 }
 
-.portfolio-container:nth-child(1) header{
+.portfolio-container:nth-child(1) header {
     background-image: url('../images/trazeo.jpg');
 }
 
-.portfolio-container:nth-child(2) header{
+.portfolio-container:nth-child(2) header {
     background-color: #5343B0;
     background-image: url('../images/phonexpert.jpg');
 }
 
-.portfolio-container:nth-child(3) header{
+.portfolio-container:nth-child(3) header {
     background-image: url('../images/sopinet2.svg');
 }
 
-.portfolio-container > div > h4{
+.portfolio-container > div > h4 {
     margin-bottom: 2rem;
 }
 
-.portfolio-container > div{
+.portfolio-container > div {
     padding: 1rem;
 }
 
-.portfolio-container > footer{
+.portfolio-container > footer {
     margin-top: 2rem;
     padding-bottom: 2rem;
     align-self: flex-end;
@@ -203,70 +258,78 @@ section#portfolio .flex-wrapper{
 
 /* Utils */
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.rounded{
+.rounded {
     border-radius: 50%;
 }
 
 /* Responsive tablet and laptop */
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
     /* Page styles*/
     body {
         font-size: 24px;
     }
 
-    body h1{
+    body h1 {
         font-size: 80px;
     }
 
-    body h2{
+    body h2 {
         font-size: 65px;
     }
 
-    body h3{
+    body h3 {
         font-size: 52px;
     }
 
-    body h4{
+    body h4 {
         font-size: 44px;
     }
 
-    section#interest .flex-wrapper > div {
-        flex: 0 0 25%;
+    /* Header */
+    body > header > h1 {
+        font-size: 40px;
     }
 
     /* Sections */
-    section > article, section > article > div{
+    section > article, section > article > div {
         padding: 2rem;
     }
 
     /* Who*/
-
-    section#who .flex-wrapper > div{
+    section#who .flex-wrapper > div {
         flex: 0 0 22%;
     }
 
-    section#who .flex-wrapper > p{
+    section#who .flex-wrapper > p {
         flex: 0 0 70%;
     }
 
     /* Portfolio*/
-
     .portfolio-container {
         flex: 0 0 40%;
     }
 
-    .portfolio-container > div{
+    .portfolio-container > div {
         padding: 2rem;
     }
 }
 
+@media only screen and (min-width: 1200px) {
 
-@media only screen and (min-width: 1200px){
+    /* Header */
+    body > header > h1 {
+        font-size: 60px;
+    }
+
+    /* Interest */
+    section#interest .flex-wrapper > div {
+        flex: 0 0 25%;
+    }
 
     /* Portfolio*/
     .portfolio-container {
