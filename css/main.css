@@ -193,15 +193,19 @@ section > h2 {
 
 /* Flex */
 
-section .flex-wrapper {
+.flex-wrapper {
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
     align-items: center;
 }
 
-section .flex-wrapper {
+.flex-wrapper {
     justify-content: space-around;
+}
+
+.flex-wrapper.column{
+    flex-flow: column;
 }
 
 /* Who */
@@ -296,7 +300,19 @@ section#about .flex-wrapper video {
     flex: 0 0 95%;
     margin-top: 4rem;
 }
-    /* Utils */
+
+/* Form */
+section form{
+    max-width: 90%;
+    margin: 3rem auto 1rem auto;
+}
+
+section#form_section *{
+    flex: 0 0 90%;
+}
+
+
+/* Utils */
 
 .text-center {
     text-align: center;
@@ -384,5 +400,14 @@ section#about .flex-wrapper video {
     section#about .flex-wrapper div,
     section#about .flex-wrapper video {
         flex: 0 0 50%;
+    }
+
+    /* Form */
+    section form{
+        max-width: 60%;
+    }
+
+    section#form_section *{
+        flex: 0 0 42%;
     }
 }
