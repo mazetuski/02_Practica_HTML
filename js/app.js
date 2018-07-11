@@ -4,6 +4,5 @@ import { Main } from "./main.js";
     window.addEventListener('load', () => {
         // Variables
         const main = new Main();
-        main.initialize();
     });
 })();

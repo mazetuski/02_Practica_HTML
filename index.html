@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Miguel Ángel Zamora Blanco</title>
     <link rel="stylesheet" href="./css/reset.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -37,8 +38,8 @@
             </div>
             <p>Soy un enamorado de la programación y de la informática en general, gran parte de mi tiempo libre la
                 dedico a seguir aprendiendo. Este último año lo he pasado en Sopinet ayudando a Startups, conociendo
-                todo tipo de ideas y personas que me han hecho crecer profesionalmente y me han enseñado que: ¡Todo en
-                esta vida se puede programar!</p>
+                todo tipo de ideas y personas que me han hecho crecer profesionalmente y me han enseñado que: <span class="primary italic">¡Todo en
+                    esta vida se puede programar!</span></p>
         </article>
     </section>
     <section id="interest">
@@ -128,10 +129,21 @@
     </section>
     <section id="about">
         <h2>Sobre mí</h2>
+        <article class="flex-wrapper">
+            <img src="images/jkd.jpg" alt="Jeet Kune Do">
+            <div>
+                <p>Aparte de la programación tengo bastantes aficiones, desde pequeño he jugado a fútbol sala en un equipo
+                    de mi ciudad y después de muchos años lo deje atrás y empecé a practicar Jeet Kune Do (arte marcial).</p>
+                <p>Dejo un vídeo para que veaís de que trata:</p>
+            </div>
+            <video controls>
+                <source src="video/video.mp4" type="video/mp4">
+            </video>
+        </article>
     </section>
     <section id="form_section">
         <h2>Formulario de Contacto</h2>
-        <form action="post" name="contact_form" id="contact_form">
+        <form action="" name="contact_form" id="contact_form">
             <input type="text" placeholder="Nombre">
             <input type="email" placeholder="Email">
             <select name="meet" id="meet">

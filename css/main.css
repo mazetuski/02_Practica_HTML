@@ -9,6 +9,11 @@
     font-family: Roboto-Bold;
 }
 
+@font-face {
+    src: url("../fonts/Roboto-Italic.ttf");
+    font-family: Roboto-Italic;
+}
+
 /* Variables*/
 
 :root {
@@ -16,6 +21,7 @@
     --font-generic: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-roboto-regular: Roboto-Regular, var(--font-generic);
     --font-roboto-bold: Roboto-Bold, var(--font-generic);
+    --font-roboto-italic: Roboto-Italic, var(--font-generic);
     /* Colors */
     --color-font-primary: #333;
     --color-font-secundary: #fff;
@@ -30,21 +36,30 @@ body {
     font-size: 18px;
     font-family: var(--font-roboto-regular);
     color: var(--color-font-primary);
-    line-height: 1.9em;
+    line-height: 1.6em;
+    overflow-x: hidden;
+}
+
+a, a:hover, .primary, nav a.active{
+    color: var(--color-primary);
 }
 
 a {
     text-decoration: none;
-    color: var(--color-primary);
 }
 
 a:hover {
-    text-decoration: none;
-    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 0.6rem;
+    margin-bottom: 0;
 }
 
 h1, h2, h3, h4 {
     font-family: var(--font-roboto-bold);
+    margin-bottom: 1rem;
 }
 
 body h1 {
@@ -69,6 +84,10 @@ img {
 
 .icon i {
     font-size: 3rem;
+}
+
+.italic{
+    font-family: var(--font-roboto-italic);
 }
 
 /* Header */
@@ -106,7 +125,7 @@ body > header > h1 {
     position: absolute;
 }
 
-#navButton .icon-visible{
+#navButton .icon-visible {
     transform: rotate(180deg);
     transition: transform .4s;
 }
@@ -142,8 +161,7 @@ nav a:hover {
 }
 
 nav a.active {
-    border:none;
-    color: var(--color-primary);
+    border: none;
 }
 
 /* Sections */
@@ -156,8 +174,16 @@ section, .flex-wrapper {
     min-height: 50vh;
 }
 
-section:nth-child(even) {
+section:nth-child(even), footer section {
     background-color: var(--color-primary);
+    color: var(--color-font-secundary);
+}
+
+section:nth-child(even) a, footer section a{
+    color: var(--color-font-secundary);
+}
+
+section:nth-child(even) a:hover, footer section a:hover{
     color: var(--color-font-secundary);
 }
 
@@ -186,6 +212,7 @@ section#who .flex-wrapper > div, section#who .flex-wrapper > p {
 
 section#who .flex-wrapper img {
     max-width: 300px;
+    margin: 2rem 0;
 }
 
 /* Interest */
@@ -256,7 +283,20 @@ section#portfolio .flex-wrapper {
     align-self: flex-end;
 }
 
-/* Utils */
+/* About */
+
+section#about .flex-wrapper img, section#about .flex-wrapper video{
+    border-radius: 10px;
+    box-shadow: 0 10px 10px var(--color-shadow-secundary)
+}
+
+section#about .flex-wrapper img,
+section#about .flex-wrapper div,
+section#about .flex-wrapper video {
+    flex: 0 0 95%;
+    margin-top: 4rem;
+}
+    /* Utils */
 
 .text-center {
     text-align: center;
@@ -334,5 +374,15 @@ section#portfolio .flex-wrapper {
     /* Portfolio*/
     .portfolio-container {
         flex: 0 0 26%;
+    }
+
+    /* About */
+    section#about .flex-wrapper img{
+        flex: 0 0 40%;
+    }
+
+    section#about .flex-wrapper div,
+    section#about .flex-wrapper video {
+        flex: 0 0 50%;
     }
 }
