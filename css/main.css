@@ -246,8 +246,11 @@ section#portfolio .flex-wrapper {
     align-items: normal;
 }
 
+.portfolio-container, .btn:hover {
+    box-shadow: 0 6px 10px var(--color-shadow);
+}
+
 .portfolio-container {
-    box-shadow: 0 8px 10px var(--color-shadow);
     flex: 0 0 98%;
     margin-top: 4rem;
 }
@@ -311,8 +314,35 @@ section#form_section *{
     flex: 0 0 90%;
 }
 
+/* Form elements */
+input, select, textarea{
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    padding: .5rem 0;
+    color: var(--color-font-primary);
+    text-indent: .5rem;
+    margin-top: 2rem;
+}
+
+input[type=submit]{
+    text-indent: 0;
+}
+
 
 /* Utils */
+
+.btn{
+    padding: 1rem 0;
+    border-radius: 3rem;
+    transition: background-color .7s, color .7s, box-shadow .7s;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transition: background-color .7s, color .7s, box-shadow .7s;
+    background-color: var(--color-primary);
+    color: var(--color-font-secundary);
+}
 
 .text-center {
     text-align: center;
@@ -409,5 +439,13 @@ section#form_section *{
 
     section#form_section *{
         flex: 0 0 42%;
+    }
+
+    section#form_section textarea{
+        flex: 0 0 92%;
+    }
+
+    section#form_section input[type=submit]{
+        flex: 0 0 20%;
     }
 }

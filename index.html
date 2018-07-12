@@ -27,7 +27,6 @@
     <a href="#portfolio">Portfolio</a>
     <a href="#about">Sobre mí</a>
     <a href="#form_section">Formulario</a>
-    <a href="#contact">Contacto</a>
 </nav>
 <main>
     <section id="who">
@@ -144,17 +143,20 @@
     <section id="form_section">
         <h2>Formulario de Contacto</h2>
         <form action="" name="contact_form" id="contact_form" class="flex-wrapper">
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Email">
-            <select name="meet" id="meet">
+            <input type="text" name="nombre" placeholder="Nombre..." required>
+            <!-- Can be type="email" but for this exercise i will check it on form.js -->
+            <input id="email" type="text" name="email" placeholder="Email..." required>
+            <select name="meet" id="meet" required>
+                <option value="" disabled selected>Como me has conocido</option>
                 <option value="empresa">Por tu empresa</option>
                 <option value="studies">Por tus estudios</option>
                 <option value="keepcoding">En Keepcoding</option>
                 <option value="others">Otros</option>
             </select>
-            <input type="tel" placeholder="Teléfono">
-            <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Comentario"></textarea>
-            <input type="submit" value="Enviar">
+            <input type="tel" placeholder="Teléfono" required>
+            <div></div>
+            <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Comentario" pattern=""></textarea>
+            <input type="submit" class="btn" value="Enviar">
         </form>
     </section>
 </main>
