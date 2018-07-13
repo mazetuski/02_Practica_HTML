@@ -13,7 +13,7 @@
 </head>
 <body>
 <header>
-    <h1>CV Miguel Ángel Zamora Blanco</h1>
+    <h1>Miguel Ángel Zamora Blanco</h1>
 </header>
 <span id="navButton" class="navButton">
     <i class="fas fa-bars icon-visible"></i>
@@ -129,7 +129,9 @@
     <section id="about">
         <h2>Sobre mí</h2>
         <article class="flex-wrapper">
-            <img src="images/jkd.jpg" alt="Jeet Kune Do">
+            <div>
+                <img src="images/jkd.jpg" alt="Jeet Kune Do">
+            </div>
             <div>
                 <p>Aparte de la programación tengo bastantes aficiones, desde pequeño he jugado a fútbol sala en un equipo
                     de mi ciudad y después de muchos años lo deje atrás y empecé a practicar Jeet Kune Do (arte marcial).</p>
@@ -143,7 +145,7 @@
     <section id="form_section">
         <h2>Formulario de Contacto</h2>
         <form action="" name="contact_form" id="contact_form" class="flex-wrapper">
-            <input type="text" name="nombre" placeholder="Nombre..." required>
+            <input id="name" type="text" name="nombre" placeholder="Nombre..." required>
             <!-- Can be type="email" but for this exercise i will check it on form.js -->
             <input id="email" type="text" name="email" placeholder="Email..." required>
             <select name="meet" id="meet" required>
@@ -161,10 +163,13 @@
     </section>
 </main>
 <footer>
-    <section id="contact">
-        <a href="https://www.linkedin.com/in/miguel-angel-zamora-blanco/">Linkedin</a>
-        <a href="https://github.com/mazetuski">Github</a>
-        <a href="mailto:mazetuski22@gmail.com">Gmail</a>
+    <section id="contact" class="flex-wrapper">
+        <a href="https://www.linkedin.com/in/miguel-angel-zamora-blanco/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/mazetuski"><i class="fab fa-github-square"></i></a>
+        <a href="mailto:mazetuski22@gmail.com"><i class="fab fa-google-plus-square"></i></a>
+        <div>
+            <p>Práctica Frontend Fundamentos Miguel Ángel Zamora Blanco</p>
+        </div>
     </section>
 </footer>
 

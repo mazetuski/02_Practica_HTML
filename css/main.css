@@ -174,8 +174,15 @@ section, .flex-wrapper {
     min-height: 50vh;
 }
 
-section:nth-child(even), footer section {
+
+section:nth-child(even) {
     background-color: var(--color-primary);
+    color: var(--color-font-secundary);
+}
+
+footer section.flex-wrapper{
+    background-color: var(--color-font-primary);
+    min-height: 30vh;
     color: var(--color-font-secundary);
 }
 
@@ -294,7 +301,14 @@ section#portfolio .flex-wrapper {
 
 section#about .flex-wrapper img, section#about .flex-wrapper video{
     border-radius: 10px;
+}
+
+section#about .flex-wrapper img{
     box-shadow: 0 10px 10px var(--color-shadow-secundary)
+}
+
+section#about .flex-wrapper video{
+    box-shadow: 0 8px 5px var(--color-shadow-secundary)
 }
 
 section#about .flex-wrapper img,
@@ -326,6 +340,34 @@ input, select, textarea{
 
 input[type=submit]{
     text-indent: 0;
+}
+
+/* Footer */
+
+footer section{
+    padding-bottom: 1rem;
+}
+
+footer .flex-wrapper {
+    justify-content: space-around;
+}
+
+footer .flex-wrapper > div {
+    flex: 0 0 100%;
+    align-self: flex-end;
+    text-align: center;
+}
+
+footer a{
+    font-size: 100px;
+}
+
+footer a:hover{
+    animation: voltear 1s cubic-bezier(.89,-0.22,0,1.5);
+}
+
+footer p{
+    font-size: 1rem;
 }
 
 
@@ -423,7 +465,7 @@ input[type=submit]{
     }
 
     /* About */
-    section#about .flex-wrapper img{
+    section#about .flex-wrapper div:nth-child(1){
         flex: 0 0 40%;
     }
 
@@ -448,4 +490,15 @@ input[type=submit]{
     section#form_section input[type=submit]{
         flex: 0 0 20%;
     }
+}
+
+@keyframes voltear {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
 }
