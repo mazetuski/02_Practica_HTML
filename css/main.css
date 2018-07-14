@@ -62,6 +62,10 @@ h1, h2, h3, h4 {
     margin-bottom: 1rem;
 }
 
+body h1, body h2{
+    line-height: 2.8rem;
+}
+
 body h1 {
     font-size: 50px;
 }
@@ -84,6 +88,10 @@ img {
 
 .icon i {
     font-size: 3rem;
+}
+
+video{
+    z-index: 2;
 }
 
 .italic{
@@ -116,7 +124,7 @@ body > header > h1 {
     background-color: var(--color-font-primary);
     color: var(--color-font-secundary);
     padding: .5rem 1.5rem;
-    z-index: 1;
+    z-index: 999;
     transition: .5s;
 }
 
@@ -141,6 +149,7 @@ nav {
     padding-top: 3rem;
     transition: 0.5s;
     box-shadow: -5px 0 5px var(--color-shadow-secundary);
+    z-index: 9;
 }
 
 nav.expanded-nav {
@@ -232,7 +241,7 @@ section#interest article {
     min-height: 60vh;
 }
 
-section#interest .flex-wrapper > div {
+section.list .flex-wrapper > div {
     flex: 0 0 92%;
     background-color: var(--color-font-secundary);
     color: var(--color-primary);
@@ -242,7 +251,7 @@ section#interest .flex-wrapper > div {
     box-shadow: 0 8px 10px var(--color-shadow-secundary);
 }
 
-section#interest .flex-wrapper > div i {
+section.list .flex-wrapper > div i {
     font-size: 3rem;
     margin: 20px 10px 10px 10px;
 }
@@ -324,7 +333,7 @@ section form{
     margin: 3rem auto 1rem auto;
 }
 
-section#form_section *{
+section.form_section *{
     flex: 0 0 90%;
 }
 
@@ -368,6 +377,17 @@ footer a:hover{
 
 footer p{
     font-size: 1rem;
+}
+
+/* Comments */
+aside section.list{
+    padding: 2rem 0;
+}
+
+aside section.list article{
+    background-color: var(--color-primary);
+    color: var(--color-font-secundary);
+    margin-top: 4rem;
 }
 
 
@@ -455,7 +475,7 @@ footer p{
     }
 
     /* Interest */
-    section#interest .flex-wrapper > div {
+    section.list .flex-wrapper > div {
         flex: 0 0 25%;
     }
 
@@ -479,15 +499,15 @@ footer p{
         max-width: 60%;
     }
 
-    section#form_section *{
+    section.form_section *{
         flex: 0 0 42%;
     }
 
-    section#form_section textarea{
+    section.form_section textarea{
         flex: 0 0 92%;
     }
 
-    section#form_section input[type=submit]{
+    section.form_section input[type=submit], section.form_section input[type=button]{
         flex: 0 0 20%;
     }
 }

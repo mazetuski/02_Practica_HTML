@@ -18,9 +18,9 @@ export class Form {
         this.inputName = document.querySelector('#name');
         this.inputEmail = document.querySelector('#email');
         this.inputTel = document.querySelector('input[type=tel]');
-        this.textArea = document.querySelector('textarea');
+        this.textArea = document.querySelector('#comment');
         this.select = document.querySelector('select');
-        this.form = document.querySelector('form');
+        this.form = document.querySelector('#contact_form');
         this.initialize();
 
         this.data = {
