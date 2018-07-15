@@ -31,7 +31,6 @@ export class Comments {
      * @param data
      */
     putComments(data){
-        console.log(data);
         data.forEach(item => {
             // check item
             if(!item) return;
