@@ -104,7 +104,7 @@ video{
 /* Header */
 body > header {
     height: 100vh;
-    background-image: url("../images/posiblefondo.jpg");
+    background-image: url("../images/fondo768.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -442,6 +442,10 @@ aside section.list article{
     }
 
     /* Header */
+    body > header {
+        background-image: url("../images/fondo1200.jpg");
+    }
+
     body > header > h1 {
         font-size: 40px;
     }
@@ -473,6 +477,10 @@ aside section.list article{
 @media only screen and (min-width: 1200px) {
 
     /* Header */
+    body > header {
+        background-image: url("../images/posiblefondo.jpg");
+    }
+
     body > header > h1 {
         font-size: 60px;
     }
