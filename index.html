@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- TODO: METER SHCHEMA.ORG -->
     <!-- TODO: AÑADIR ANALITYCS con evento en formulario -->
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -53,23 +52,23 @@
 </head>
 <body>
 
-<header itemscope itemtype="http://schema.org/Person">
-    <h1 itemprop="name">Miguel Ángel Zamora Blanco</h1>
+<header itemscope itemtype="http://schema.org/CreativeWork">
+    <h1 itemprop="author">Miguel Ángel Zamora Blanco</h1>
 </header>
 
 <span id="navButton" class="navButton">
     <i class="fas fa-bars icon-visible"></i>
     <i class="fas fa-times icon-hidden"></i>
 </span>
-<nav>
-    <a href="#who">¿Quién Soy?</a>
-    <a href="#interest">Intereses</a>
-    <a href="#formation">Formación</a>
-    <a href="#experience">Experiencia</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#about">Sobre mí</a>
-    <a href="#form_section">Formulario</a>
-    <a href="#comments">Comentarios</a>
+<nav itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <a itemprop="url" href="#who"><span itemprop="name">¿Quién Soy?</span></a>
+    <a itemprop="url" href="#interest"><span itemprop="name">Intereses</span></a>
+    <a itemprop="url" href="#formation"><span itemprop="name">Formación</span></a>
+    <a itemprop="url" href="#experience"><span itemprop="name">Experiencia</span></a>
+    <a itemprop="url" href="#portfolio"><span itemprop="name">Portfolio</span></a>
+    <a itemprop="url" href="#about"><span itemprop="name">Sobre mí</span></a>
+    <a itemprop="url" href="#form_section"><span itemprop="name">Formulario</span></a>
+    <a itemprop="url" href="#comments"><span itemprop="name">Comentarios</span></a>
 </nav>
 <main>
     <section id="who">
@@ -136,37 +135,37 @@
     <section id="portfolio">
         <h2>Portfolio</h2>
         <div class="flex-wrapper">
-            <article itemscope itemtype="http://schema.org/SoftwareApplication" class="portfolio-container">
+            <article class="portfolio-container">
                 <header></header>
                 <div>
-                    <h4 itemprop="name" class="text-center">Trazeo</h4>
+                    <h4 class="text-center">Trazeo</h4>
                     <p>Desarrollo frontend de la web</p>
                     <p>Premio MWC Barcelona 2018</p>
                 </div>
                 <footer class="icon text-center">
-                    <a itemprop="url" href="https://trazeo.es/" rel="nofollow"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://trazeo.es/" rel="nofollow"><i class="fas fa-external-link-alt"></i></a>
                 </footer>
             </article>
-            <article itemscope itemtype="http://schema.org/SoftwareApplication" class="portfolio-container">
+            <article class="portfolio-container">
                 <header></header>
                 <div>
-                    <h4 itemprop="name" class="text-center">Phonexpert</h4>
+                    <h4 class="text-center">Phonexpert</h4>
                     <p>Parte del equipo de desarrollo</p>
                     <p>Desarrollo chatbox de facebook</p>
                 </div>
                 <footer class="icon text-center">
-                    <a itemprop="url" href="http://phonexpert.co/" rel="nofollow"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="http://phonexpert.co/" rel="nofollow"><i class="fas fa-external-link-alt"></i></a>
                 </footer>
             </article>
-            <article itemscope itemtype="http://schema.org/SoftwareApplication" class="portfolio-container">
+            <article class="portfolio-container">
                 <header></header>
                 <div>
-                    <h4 itemprop="name" class="text-center">Sopinet</h4>
+                    <h4 class="text-center">Sopinet</h4>
                     <p>Desarrollo Full Stack de la web</p>
                     <p>Parte del equipo del rebranding</p>
                 </div>
                 <footer class="icon text-center">
-                    <a itemprop="url" href="https://sopinet.com/" rel="nofollow"><i class="fas fa-external-link-alt"></i></a>
+                    <a href="https://sopinet.com/" rel="nofollow"><i class="fas fa-external-link-alt"></i></a>
                 </footer>
             </article>
         </div>
@@ -229,7 +228,7 @@
         <a href="https://github.com/mazetuski" rel="nofollow"><i class="fab fa-github-square"></i></a>
         <a href="mailto:mazetuski22@gmail.com" rel="nofollow"><i class="fab fa-google-plus-square"></i></a>
         <div>
-            <p>Práctica Frontend FundamentosMiguel Ángel Zamora Blanco</p>
+            <p>Práctica Frontend Fundamentos Miguel Ángel Zamora Blanco</p>
         </div>
     </section>
 </footer>
