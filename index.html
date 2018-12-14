@@ -53,10 +53,10 @@
 </head>
 <body>
 
-<span itemscope itemtype="http://schema.org/Article">
-<header>
-    <h1>Miguel Ángel Zamora Blanco</h1>
+<header itemscope itemtype="http://schema.org/Article">
+    <h1 itemprop="name">Miguel Ángel Zamora Blanco</h1>
 </header>
+
 <span id="navButton" class="navButton">
     <i class="fas fa-bars icon-visible"></i>
     <i class="fas fa-times icon-hidden"></i>
@@ -75,7 +75,7 @@
     <section id="who">
         <h2>¿Quién soy?</h2>
         <article class="flex-wrapper">
-            <div class="text-center">
+            <div class="text-center" itemscope itemtype="http://schema.org/Article">
                 <img itemprop="image" class="rounded" src="./images/miguel.jpeg" alt="Miguel Ángel Zamora Blanco"
                      title="Fotografía del autor de la página, Miguel Ángel Zamora Blanco">
             </div>
@@ -228,15 +228,11 @@
         <a href="https://www.linkedin.com/in/miguel-angel-zamora-blanco/" rel="nofollow"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/mazetuski" rel="nofollow"><i class="fab fa-github-square"></i></a>
         <a href="mailto:mazetuski22@gmail.com" rel="nofollow"><i class="fab fa-google-plus-square"></i></a>
-        <div>
-            <p>Práctica Frontend Fundamentos
-            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-<span itemprop="name">Miguel Ángel Zamora Blanco</span></span>
-            </p>
+        <div itemscope itemtype="http://schema.org/Person">
+            <p>Práctica Frontend Fundamentos<span itemprop="name">Miguel Ángel Zamora Blanco</span></p>
         </div>
     </section>
-</footer>
-</span>
+</footer>   
 
 <!-- CSS -->
 <noscript id="deferred-styles">
